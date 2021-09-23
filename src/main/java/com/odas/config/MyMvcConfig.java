@@ -3,6 +3,7 @@ package com.odas.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -23,5 +24,12 @@ public class MyMvcConfig implements WebMvcConfigurer {
     @Bean
     public LocaleResolver localeResolver() {
         return new MyLocaleResolver();
+    }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new LoginHandlerInterceptor())
+                .addPathPatterns("/**")     // 所有请求都拦截
+                .excludePathPatterns("/index.html", "/", "/user/login", "/static/**");  // 排除一些路径的拦截，包括静态资源
     }
 }
