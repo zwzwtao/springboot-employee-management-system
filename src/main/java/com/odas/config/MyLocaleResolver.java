@@ -21,7 +21,7 @@ public class MyLocaleResolver implements LocaleResolver {
         if (StringUtils.hasText(language)) {
             // zh_CN
             String[] split = language.split("_");
-            // 国家，地区
+            // 语言，国家
            locale = new Locale(split[0], split[1]);
         }
 
