@@ -14,6 +14,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
         // 这里自己定义视图解析器，输入/或者/index.html跳转到templates下的login页面
         registry.addViewController("/").setViewName("index");
         registry.addViewController("/index.html").setViewName("index");
+        registry.addViewController("/main.html").setViewName("dashboard");
     }
 
     // 自定义的国际化组件加在这里哟
