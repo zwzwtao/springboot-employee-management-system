@@ -24,6 +24,6 @@ public class Employee {
         this.gender = gender;
         this.department = department;
         // birth默认为创建的日期
-        this.birth = birth;
+        this.birth = new Date();
     }
 }
