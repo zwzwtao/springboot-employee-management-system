@@ -70,8 +70,10 @@
 									<td th:text="${emp.department.getDepartmentName()}"></td>
 									<td th:text="${#dates.format(emp.getBirth(), 'yyyy-MM-dd HH:mm:ss')}"></td>
 									<td>
-										<button class="btn btn-sm btn-primary">编辑</button>
-										<button class="btn btn-sm btn-danger">删除</button>
+										<!-- 下面的href使用restful风格会更好 -->
+										<!-- "@{'/emps/' + ${emp.getId()}}" -->
+										<a class="btn btn-sm btn-primary" th:href="@{'/emp/' + ${emp.getId()}}">编辑</a>
+										<a class="btn btn-sm btn-danger">删除</a>
 									</td>
 								</tr>
 							</tbody>

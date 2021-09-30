@@ -24,11 +24,11 @@ public class EmployeeDao {
         // 创建一个员工表
         employees = new HashMap<Integer, Employee>();
 
-        employees.put(101, new Employee(1001, "AA", "123@gmail.com", 1, new Department(101, "科学部")));
-        employees.put(102, new Employee(1002, "AA", "456@gmail.com", 0, new Department(101, "科学部")));
-        employees.put(103, new Employee(1003, "AA", "789@gmail.com", 1, new Department(101, "科学部")));
-        employees.put(104, new Employee(1004, "AA", "135@gmail.com", 0, new Department(101, "科学部")));
-        employees.put(105, new Employee(1005, "AA", "267@gmail.com", 1, new Department(101, "科学部")));
+        employees.put(1001, new Employee(1001, "AA", "123@gmail.com", 1, new Department(101, "科学部")));
+        employees.put(1002, new Employee(1002, "AA", "456@gmail.com", 0, new Department(101, "科学部")));
+        employees.put(1003, new Employee(1003, "AA", "789@gmail.com", 1, new Department(101, "科学部")));
+        employees.put(1004, new Employee(1004, "AA", "135@gmail.com", 0, new Department(101, "科学部")));
+        employees.put(1005, new Employee(1005, "AA", "267@gmail.com", 1, new Department(101, "科学部")));
     }
 
     // 主键自增!
