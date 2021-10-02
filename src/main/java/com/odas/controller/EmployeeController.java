@@ -62,11 +62,20 @@ public class EmployeeController {
         return "emp/update";
     }
 
-
     @RequestMapping(value = "/updateEmp", method = RequestMethod.POST)
     public String updateEmp(Employee employee) {
         employeeDao.save(employee);
 
         return "redirect:/emps";
     }
+
+    // 删除员工
+    @RequestMapping(value = "/delemp/{id}", method = RequestMethod.GET)
+    public String deleteEmp(@PathVariable("id") int id) {
+        employeeDao.delete(id);
+
+        return "redirect:/emps";
+    }
+
+    // 关于404页面，直接把
 }

@@ -73,7 +73,8 @@
 										<!-- 下面的href使用restful风格会更好 -->
 										<!-- "@{'/emps/' + ${emp.getId()}}" -->
 										<a class="btn btn-sm btn-primary" th:href="@{'/emp/' + ${emp.getId()}}">编辑</a>
-										<a class="btn btn-sm btn-danger">删除</a>
+										<!-- 顺带一提用?id=XX的话语法是这个 @{/delemp/id(id=${emp.getId()})} -->
+										<a class="btn btn-sm btn-danger" th:href="@{'/delemp/' + ${emp.getId()}}">删除</a>
 									</td>
 								</tr>
 							</tbody>

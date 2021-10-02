@@ -31,4 +31,12 @@ public class LoginController {
         }
     }
 
+    @RequestMapping("/user/logout")
+    public String logout(HttpSession session) {
+        session.invalidate();
+
+        return "redirect:/index.html";
+    }
+
+    // 404和500页面只要在templates目录下面创建404和500文件夹把对应的页面放进去即可
 }
